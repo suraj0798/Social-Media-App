@@ -5,6 +5,8 @@ import { readdirSync } from "fs";
 const morgan = require("morgan");
 // config dotenv file
 require("dotenv").config();
+
+const authRoutes = require("./routes/authRoutes")
 //rest obj
 const app = express();
 
