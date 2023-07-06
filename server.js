@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import { readdirSync } from "fs";
-import morgan from "morgan";
+const morgan = require("morgan");
 import dotenv from "dotenv";
 // config dotenv file
 dotenv.config();
@@ -21,7 +21,8 @@ mongoose
 //middlewares
 app.use(express.json());
 app.use(cors());
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
+app.use(morgan('combined'));
 
 //route
 readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
