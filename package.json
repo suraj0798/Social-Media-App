@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node -r esm server.js",
-    "server": "nodemon -r esm server.js",
     "client": "npm run dev --prefix client",
     "dev": " concurrently \"npm run server\" \"npm run client\" "
   },
